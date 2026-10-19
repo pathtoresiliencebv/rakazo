@@ -147,6 +147,11 @@ tags:
 - assertVisible: "Speak message"
 - takeScreenshot: "15b-message-actions"
 - back
+# Wait for the action row to finish dismissing; a long press during the
+# animation is swallowed and the row never opens.
+- extendedWaitUntil:
+    notVisible: "Reply"
+    timeout: 10000
 # User messages omit Speak.
 - longPressOn: "Summarize the fixture launch checklist."
 - assertVisible: "Reply"

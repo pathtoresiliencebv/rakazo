@@ -28,7 +28,7 @@ tags:
     visible: "Researcher"
     timeout: 30000
 
-# Account -> Language -> Nederlands
+# Account -> Taal -> Nederlands
 - tapOn: "Account"
 - extendedWaitUntil:
     visible: "Language"
@@ -39,6 +39,10 @@ tags:
     visible: "Nederlands"
     timeout: 15000
 - takeScreenshot: "11-taal-keuze-en"
+- scrollUntilVisible:
+    element: "Nederlands"
+    direction: DOWN
+    timeout: 15000
 - tapOn: "Nederlands"
 - extendedWaitUntil:
     visible: "Taal"
