@@ -1,0 +1,56 @@
+name: Web E2E locale
+
+# The full web suite does not fit in one runner window; this job covers the
+# language-picker end-to-end tests on their own, which is what a new UI locale
+# changes.
+on:
+  workflow_dispatch:
+    inputs:
+      spec:
+        description: Playwright spec to run
+        required: false
+        default: e2e/ui-locale.spec.ts
+
+permissions:
+  contents: read
+
+concurrency:
+  group: web-e2e-locale-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  locale:
+    name: Web E2E locale
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      CI: "1"
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - name: Install Chromium
+        timeout-minutes: 5
+        run: pnpm --filter @rakazo/web exec playwright install chromium
+
+      - name: Run the locale end-to-end tests
+        run: pnpm test:e2e -- --sandbox=fake --spec=${{ inputs.spec || 'e2e/ui-locale.spec.ts' }}
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: web-e2e-locale-${{ github.run_id }}
+          path: |
+            apps/web/test-results
+            playwright-report
+          retention-days: 7
+          if-no-files-found: ignore
