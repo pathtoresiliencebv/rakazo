@@ -1,4 +1,4 @@
-appId: com.rakazo.app
+appId: com.jsnassistent.app
 name: Rakazo mobile smoke
 ---
 - launchApp:

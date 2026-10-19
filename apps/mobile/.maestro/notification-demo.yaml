@@ -1,4 +1,4 @@
-appId: com.rakazo.app
+appId: com.jsnassistent.app
 name: Android live working status demonstration
 ---
 - launchApp:
