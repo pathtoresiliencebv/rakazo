@@ -1,10 +1,9 @@
 {
   "expo": {
-    "name": "Rakazo",
-    "slug": "rakazo",
-    "owner": "inbox-zero",
+    "name": "JSN ASSISTENT",
+    "slug": "jsn-assistent",
     "scheme": "rakazo",
-    "version": "1.0.6",
+    "version": "1.0.0",
     "orientation": "default",
     "userInterfaceStyle": "automatic",
     "icon": "./assets/icon.png",
@@ -23,14 +22,14 @@
         "expo-audio",
         {
           "enableBackgroundPlayback": false,
-          "microphonePermission": "Rakazo uses the microphone for voice calls with your bots."
+          "microphonePermission": "JSN ASSISTENT uses the microphone for voice calls with your bots."
         }
       ],
       [
         "expo-speech-recognition",
         {
-          "speechRecognitionPermission": "Rakazo turns your speech into messages during voice calls.",
-          "microphonePermission": "Rakazo uses the microphone for voice calls with your bots."
+          "speechRecognitionPermission": "JSN ASSISTENT turns your speech into messages during voice calls.",
+          "microphonePermission": "JSN ASSISTENT uses the microphone for voice calls with your bots."
         }
       ],
       "expo-localization",
@@ -45,9 +44,9 @@
       [
         "expo-image-picker",
         {
-          "photosPermission": "Rakazo uses your photo library so you can attach images to a bot message.",
+          "photosPermission": "JSN ASSISTENT uses your photo library so you can attach images to a bot message.",
           "cameraPermission": "Rakazo uses the camera so you can attach photos to a bot message.",
-          "microphonePermission": "Rakazo uses the microphone for voice calls with your bots."
+          "microphonePermission": "JSN ASSISTENT uses the microphone for voice calls with your bots."
         }
       ],
       "expo-sharing",
@@ -56,7 +55,7 @@
       "./plugins/with-lan-cleartext"
     ],
     "ios": {
-      "bundleIdentifier": "com.rakazo.app",
+      "bundleIdentifier": "com.jsnassistent.app",
       "buildNumber": "1",
       "supportsTablet": false,
       "icon": "../../packages/ui-tokens/assets/Rakazo.icon",
@@ -65,7 +64,7 @@
       },
       "infoPlist": {
         "NSCameraUsageDescription": "Rakazo uses the camera so you can attach photos to a bot message.",
-        "NSPhotoLibraryUsageDescription": "Rakazo uses your photo library so you can attach images to a bot message.",
+        "NSPhotoLibraryUsageDescription": "JSN ASSISTENT uses your photo library so you can attach images to a bot message.",
         "NSLocalNetworkUsageDescription": "Rakazo connects to a self-hosted Rakazo server on your local network.",
         "NSAppTransportSecurity": {
           "NSAllowsLocalNetworking": true
@@ -73,8 +72,8 @@
       }
     },
     "android": {
-      "package": "com.rakazo.app",
-      "versionCode": 10,
+      "package": "com.jsnassistent.app",
+      "versionCode": 1,
       "softwareKeyboardLayoutMode": "resize",
       "icon": "./assets/icon.png",
       "adaptiveIcon": {
@@ -90,14 +89,14 @@
       "router": {},
       "supportsRTL": true,
       "eas": {
-        "projectId": "07f7eb04-45e3-47fe-9374-99a2f991131e"
+        "projectId": "78cec7f2-2395-42a1-869d-494cde589d03"
       }
     },
     "runtimeVersion": {
       "policy": "appVersion"
     },
     "updates": {
-      "url": "https://u.expo.dev/07f7eb04-45e3-47fe-9374-99a2f991131e"
+      "url": "https://u.expo.dev/78cec7f2-2395-42a1-869d-494cde589d03"
     }
   }
 }
